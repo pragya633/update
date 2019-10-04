@@ -1,0 +1,67 @@
+package com.cg.ibs.cardmanagement.cardbean;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.LocalDate;
+
+public class CreditCardTransactionBean {
+	
+	private String transactionid;
+	private String UCI;
+	private BigInteger creditCardNumber;
+	private LocalDate date;
+	private BigDecimal amount;
+	private String description;
+	
+	public CreditCardTransactionBean(String transactionid, String uCI, BigInteger creditCardNumber, LocalDate date,
+			BigDecimal amount, String description) {
+		super();
+		this.transactionid = transactionid;
+		UCI = uCI;
+		this.creditCardNumber = creditCardNumber;
+		this.date = date;
+		this.amount = amount;
+		this.description = description;
+	}
+	public CreditCardTransactionBean(String transactionid2, String uCI2, String string, int i, int j,
+			String description2) {
+		// TODO Auto-generated constructor stub
+	}
+	public String getTransactionid() {
+		return transactionid;
+	}
+	public void setTransactionid(String transactionid) {
+		this.transactionid = transactionid;
+	}
+	public String getUCI() {
+		return UCI;
+	}
+	public void setUCI(String uCI) {
+		UCI = uCI;
+	}
+	public BigInteger getCreditCardNumber() {
+		return creditCardNumber;
+	}
+	public void setCreditCardNumber(BigInteger creditCardNumber) {
+		this.creditCardNumber = creditCardNumber;
+	}
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	public BigDecimal getAmount() {
+		return amount;
+	}
+	public void setAmount(BigDecimal amount) {
+		this.amount = amount;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+}
