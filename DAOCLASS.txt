@@ -1,0 +1,46 @@
+FOR DAOCLASS
+
+
+
+	static{
+		
+		CustomerBean customer1 = new CustomerBean(new BigInteger("1234567890"),"7894561239632587","Ajay","P","ajay@gmail.com","749465231351","9942165431");
+		Customer_Details.put(customer1.getAccountNumber(),customer1);
+		
+		DebitCardBean debit1= new DebitCardBean(new BigInteger("1234567890"), new BigInteger("1234567891012131"),true, "Ajay P", 067,1234,LocalDate.now(),"7894561239632587","Gold");
+		Debit_Card_Details.put(debit1.getDebitCardNumber().toString(),debit1);
+		
+		//Transactions for Ajay Gold Debit Card
+		DebitCardTransactionBean debittrans1 = new DebitCardTransactionBean("DEB101", "7894561239632587", new BigInteger("1234567890"), new BigInteger("1234567891012131"), 02-10-19, 1563, "Petrol", "Debit");
+		DebitCardTransactionBean debittrans2 = new DebitCardTransactionBean("DEB102", "7894561239632587",new BigInteger("1234567890"), new BigInteger("1234567891012131"), 03-10-19, 20.45, "Interest", "Credit");
+		Debit_Card_Transaction_Details.put(debittrans1.getTransactionid(), debittrans1);
+		Debit_Card_Transaction_Details.put(debittrans2.getTransactionid(), debittrans2);
+			
+		CreditCardBean credit1= new CreditCardBean(new BigInteger("1234567891012132"),true, "Ajay P",623,9856,LocalDate.now(), "Platinum", "200", "100000.00", "incometax");
+		Credit_Card_Details.put(credit1.getCreditCardNumber().toString(),credit1);
+		
+		//Transactions for Ajay Platinum Credit Card
+		CreditCardTransactionBean credittrans1 = new CreditCardTransactionBean("CRED101", "7894561239632587", "1234567891012132", 01-10-19, 5000, "Shopping");
+		CreditCardTransactionBean credittrans2 = new CreditCardTransactionBean("CRED102", "7894561239632587", "1234567891012132", 01-10-19, 1000, "Movie");
+		Credit_Card_Transaction_Details.put(credittrans1.getTransactionid(), credittrans1);
+		Credit_Card_Transaction_Details.put(credittrans2.getTransactionid(), credittrans2);
+	
+		CustomerBean customer2 = new CustomerBean("9876543210", "8888999666555444", "Vijay", "M", "vijay@gmail.com", "987465471230", "987654321");
+		Customer_Details.put(customer2.getAccountNumber(),customer2);
+		
+		DebitCardBean debit2 = new DebitCardBean("9876543210", "123456789223141", true, "Vijay M", 700, 4567, LocalDate.now(), "8888999666555444", "Silver");
+		Debit_Card_Details.put(debit2.getDebitCardNumber().toString(),debit2);
+		
+		//Transactions for Vijay Silver Debit Card
+		DebitCardTransactionBean debit2trans1 = new DebitCardTransactionBean("DEB201", "8888999666555444", new BigInteger("9876543210"), new BigInteger("123456789223141"), 04-10-19, 156, "Fine", "Debit");
+		DebitCardTransactionBean debit2trans2 = new DebitCardTransactionBean("DEB202", "8888999666555444",new BigInteger("9876543210"), new BigInteger("123456789223141"), 04-10-19, 203.7, "Cashback", "Credit");
+		Debit_Card_Transaction_Details.put(debit2trans1.getTransactionid(), debit2trans1);
+		Debit_Card_Transaction_Details.put(debit2trans2.getTransactionid(), debit2trans2);
+	
+	}
+
+
+
+
+
+
